@@ -1,0 +1,38 @@
+create database db_escola;
+use db_escola;
+
+create table alunos(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255),
+nascimento DATE,
+matricula VARCHAR(255)
+);
+
+create table professores(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255),
+formacao VARCHAR(255)
+);
+
+CREATE TABLE disciplinas (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255),
+carga_horaria INT
+);
+
+CREATE TABLE turmas(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome_turma VARCHAR(255),
+ano int,
+professor_id INT,
+FOREIGN KEY (professor_id) REFERENCES professores(id)
+);
+
+
+
+
+
+#testes aq fi
+insert into alunos(nascimento) VALUES ('210320211');
+select * from turmas;
+
